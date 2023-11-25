@@ -66,6 +66,7 @@ public class Main {
         int[] tab = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         System.out.println(Arrays.toString(tab));
         reverseTab(tab);
+        System.out.println();
 
         //8. wykonanie kodu z instrukcji laboratoryjnej
         // args to parametry programu przekazane z wiersza poleceń
@@ -75,6 +76,7 @@ public class Main {
         for (int i = 0; i < args.length; i++) {
             System.out.println("Parametr " + i + ": " + args[i]);
         }
+        System.out.println();
 
         //9.
 
