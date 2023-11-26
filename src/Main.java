@@ -1,5 +1,5 @@
-import java.util.Arrays;
-import java.util.Scanner;
+//import java.util.Arrays;
+//import java.util.Scanner;
 import java.util.*;
 
 public class Main {
@@ -83,26 +83,55 @@ public class Main {
             System.out.println("Parametr " + i + ": " + args[i]);
         }
         System.out.println();
+
         //9.Wywołanie metod zwracających boolean i użycie ich w instrukcji if z operatorami logicznymi
 
         System.out.println("Enter string One :");
         String stringOne = scanner.nextLine();
         System.out.println("Enter string Two :");
         String stringTwo = scanner.nextLine();
-        if (equalCheck(stringOne,stringTwo) && lenghtCheck(stringOne))
+        if (equalCheck(stringOne,stringTwo) && lenghtCheck(stringOne)) // | lenghtCheck(stringTwo))
         System.out.println("Condition are met");
         else System.out.println("Condition are not met");
+        System.out.println();
+
+        //10.Pobieranie liczb z parametrów i wykonanie podstawowych operacji arytmetycznych
+        if (args.length > 2) {
+            mathOperation(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+        }
+        System.out.println();
 
         scanner.close();
     }
 
     // metoda do odwracania tablicy
     private static void reverseTab(int[] tab) {
-        Collections.reverse(Arrays.asList(tab));
-        System.out.println(Arrays.asList(tab));
+        //Collections.reverse(Arrays.asList(tab));
+        //System.out.println(Arrays.asList(tab));
+        Collections.reverse(Collections.singletonList(Arrays.toString(tab)));
+        System.out.println(Arrays.toString(tab));
     }
 
     //  metody boolean dla operatorów logicznych
     private static boolean equalCheck (String stringOne, String stringTwo){ return stringOne.equals(stringTwo); }
     private static boolean lenghtCheck (String string) { return string.length() <= 5; }
+
+    // metoda dla operacji matematycznych
+    private static void mathOperation(int arg1, int arg2, int arg3) {
+        int sum = arg1 + arg2;
+        int difference = arg1 - arg3;
+        int product = arg1 * arg2;
+        float quotient = (float) arg1 / arg3;
+        double square = (double) Math.sqrt(arg1);
+        double square2 = (double) Math.sqrt(arg2);
+        double square3 = (double) Math.sqrt(arg3);
+
+        System.out.println("Sum p0 + p1: " + sum);
+        System.out.println("Difference p0 - p2: " + difference);
+        System.out.println("Product p0 * p1: " + product);
+        System.out.println("Quotient p2 / p0: " + quotient);
+        System.out.println("Square root from first argument p0: " + square);
+        System.out.println("Square root rom second argument p1: " + square2);
+        System.out.println("Square root from third argument p2: " + square3);
+    }
 }
