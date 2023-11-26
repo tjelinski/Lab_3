@@ -17,9 +17,13 @@ public class Main {
         System.out.println("int : " + intString + "  long : " + longString + "  float : " + floatString + "  double : " + doubleString);
 
         // 3. Testowanie operatora trójargumentowego.
-        System.out.println("Enter the values: ");
+        System.out.println("Our operation (a > b) ? a : b ");
+        System.out.println("Enter the value a: ");
         int a = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Enter the value b: ");
         int b = scanner.nextInt();
+        scanner.nextLine();
         int max = (a > b) ? a : b; // jeżeli a > b to max = a inaczej b = max
         System.out.println("Max value: " + max);
 
@@ -44,8 +48,10 @@ public class Main {
         System.out.println("Our operation (c + d ) * 2 / 3 % 2");
         System.out.println("Enter value for c: ");
         double c = scanner.nextDouble();
+        scanner.nextLine();
         System.out.println("Enter value for d: ");
         double d = scanner.nextDouble();
+        scanner.nextLine();
         double myValue = (c + d) * 2 / 3 % 2;
         System.out.println("Result: " + myValue); // kolejność to dodawanie, mnożenie, dzielenie i modulo
         System.out.println();
@@ -77,13 +83,26 @@ public class Main {
             System.out.println("Parametr " + i + ": " + args[i]);
         }
         System.out.println();
+        //9.Wywołanie metod zwracających boolean i użycie ich w instrukcji if z operatorami logicznymi
 
-        //9.
+        System.out.println("Enter string One :");
+        String stringOne = scanner.nextLine();
+        System.out.println("Enter string Two :");
+        String stringTwo = scanner.nextLine();
+        if (equalCheck(stringOne,stringTwo) && lenghtCheck(stringOne))
+        System.out.println("Condition are met");
+        else System.out.println("Condition are not met");
 
+        scanner.close();
     }
 
+    // metoda do odwracania tablicy
     private static void reverseTab(int[] tab) {
         Collections.reverse(Arrays.asList(tab));
         System.out.println(Arrays.asList(tab));
     }
+
+    //  metody boolean dla operatorów logicznych
+    private static boolean equalCheck (String stringOne, String stringTwo){ return stringOne.equals(stringTwo); }
+    private static boolean lenghtCheck (String string) { return string.length() <= 5; }
 }
