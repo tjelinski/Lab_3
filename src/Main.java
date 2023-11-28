@@ -5,43 +5,46 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         //2. konwersja Stringa na typy liczbowe
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //utworzenie obiektu scanner na potrzeby wprowadzania danych z klawiatury
         System.out.println("Enter String ");
-        String myString = scanner.nextLine();
+        String myString = scanner.nextLine(); //wczytsanie danych z konsoli
 
         int intString = Integer.parseInt(myString);
         long longString = Long.parseLong(myString);
         float floatString = Float.parseFloat(myString);
         double doubleString = Double.parseDouble(myString);
-
+        //wyświetlanie skonwertowanych wartości
         System.out.println("int : " + intString + "  long : " + longString + "  float : " + floatString + "  double : " + doubleString);
 
         // 3. Testowanie operatora trójargumentowego.
         System.out.println("Our operation (a > b) ? a : b ");
         System.out.println("Enter the value a: ");
         int a = scanner.nextInt();
+        /* Konsumowanie znaku nowej linii pozostawionego przez nextInt() w sytuacji
+        gdy nie znajdował sie w kodzie nie miałem możliwosci wprowadzenia z konsoli danych dotyczących zadania nr. 9
+         po wyświetleniu komunikatu o string One od razu wyświwetlał sie komunikat  o podanie Two*/
         scanner.nextLine();
         System.out.println("Enter the value b: ");
         int b = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // j/w
         int max = (a > b) ? a : b; // jeżeli a > b to max = a inaczej b = max
         System.out.println("Max value: " + max);
 
         //4 . Break i continue
         System.out.println("Using break:");
-        Label1:
+        Label1: //etykieta dla petli
         for (int i = 0; i < 5; i++) {
             if (i == 3) {
-                break Label1;
+                break Label1;   // przerwanie pętli o etykiecie Label1
             }
             System.out.println(i);
         }
 
         System.out.println("Using continue:");
-        Label2:
+        Label2: //etykieta dla petli
         for (int i = 0; i < 5; i++) {
             if (i == 2) {
-                continue Label2;
+                continue Label2;    //kontynuacja pętli o etykiecie Label2
             }
             System.out.println(i);
         }
@@ -50,10 +53,10 @@ public class Main {
         System.out.println("Our operation (c + d ) * 2 / 3 % 2");
         System.out.println("Enter value for c: ");
         double c = scanner.nextDouble();
-        scanner.nextLine();
+        scanner.nextLine(); // Konsumowanie znaku nowej linii pozostawionego przez nextDouble()
         System.out.println("Enter value for d: ");
         double d = scanner.nextDouble();
-        scanner.nextLine();
+        scanner.nextLine(); // j/w
         double myValue = (c + d) * 2 / 3 % 2;
         System.out.println("Result: " + myValue); // kolejność to dodawanie, mnożenie, dzielenie i modulo
         System.out.println();
@@ -63,19 +66,24 @@ public class Main {
         String myStringTwo = "Hello";
         String myStringThree = "Something else";
         System.out.println(myStringOne.equals(myStringTwo)); // zwraca prawdę ponieważ porównuje zawartość stringów
-        System.out.println(myStringTwo.equals(myStringThree)); // fałsz
-        boolean isTheSameOne = (myStringOne == myStringTwo);
+        System.out.println(myStringTwo.equals(myStringThree)); // fałsz ponieeważ equals porównuje zawartość dwóch stringów, a nie referencje do obiektów; myStringTwo i myStringThree zawierają różne ciągi znaków
+        boolean isTheSameOne = (myStringOne == myStringTwo);    // Porównanie referencji, a nie zawartości
         System.out.println(isTheSameOne);
         boolean isTheSameTwo = (myStringOne == myStringThree);
         System.out.println(isTheSameTwo);
         System.out.println();
 
         //7.Odwracanie tablicy
+        /*"odwrócenie " działa poprawnie, ponieważ tablica tab jest tablicą obiektów (Integer[]), a nie tablicą prymitywną (int[])
+        jak założyłem za pierwszym razem, wtedy drukowane były "śmieci" w odwróconej  tablicy */
+
+        //https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html
+        //https://www.geeksforgeeks.org/reverse-an-array-in-java/
 
         Integer[] tab = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         System.out.println("Array before : " + Arrays.toString(tab));
         System.out.println("Using reverse method");
-        reverseTab(tab);
+        reverseTab(tab);    //wywołanie metody
         System.out.println("Array after : " + Arrays.toString(tab));
         System.out.println();
 
@@ -107,17 +115,17 @@ public class Main {
         }
         System.out.println();
 
-        scanner.close();
+        scanner.close(); //zamkniecei obiektu scanner
     }
 
     // metoda do odwracania tablicy
-    static void reverseTab(Integer[] tab) {
+    static void reverseTab(Integer[] tab) { // metoda odwracania tablicy za pomocą listy
         Collections.reverse(Arrays.asList(tab));
     }
 
     //  metody boolean dla operatorów logicznych
-    private static boolean equalCheck (String stringOne, String stringTwo){ return stringOne.equals(stringTwo); }
-    private static boolean lenghtCheck (String string) { return string.length() <= 5; }
+    private static boolean equalCheck (String stringOne, String stringTwo){ return stringOne.equals(stringTwo); } //porównanie zawartości stringa
+    private static boolean lenghtCheck (String string) { return string.length() <= 5; } //porównanie długości stringa
 
     // metoda dla operacji matematycznych
     private static void mathOperation(int arg1, int arg2, int arg3) {
