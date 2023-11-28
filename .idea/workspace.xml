@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22f75e8e-06fa-4950-84a1-595f47024bdc" name="Changes" comment="case 9">
-      <change afterPath="$PROJECT_DIR$/src/TabFill.java" afterDir="false" />
+    <list default="true" id="22f75e8e-06fa-4950-84a1-595f47024bdc" name="Changes" comment="case 11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -54,7 +53,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TabFill">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Lab_3" />
@@ -70,14 +69,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="tets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tets" />
+      <module name="Lab_3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.TabFill" />
+      <item itemvalue="Application.tets" />
       <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TabFill" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.tets" />
+        <item itemvalue="Application.TabFill" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700940037619</updated>
       <workItem from="1700940038661" duration="4286000" />
-      <workItem from="1700992319158" duration="11983000" />
+      <workItem from="1700992319158" duration="17903000" />
     </task>
     <task id="LOCAL-00001" summary="part one from 1 to 7">
       <option name="closed" value="true" />
@@ -148,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701000253730</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="case 11">
+      <option name="closed" value="true" />
+      <created>1701012416278</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701012416278</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +187,7 @@
     <MESSAGE value="part one from 1 to 7" />
     <MESSAGE value="part one from 1 to 8" />
     <MESSAGE value="case 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="case 9" />
+    <MESSAGE value="case 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="case 11" />
   </component>
 </project>

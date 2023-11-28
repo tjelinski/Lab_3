@@ -29,17 +29,19 @@ public class Main {
 
         //4 . Break i continue
         System.out.println("Using break:");
+        Label1:
         for (int i = 0; i < 5; i++) {
             if (i == 3) {
-                break;
+                break Label1;
             }
             System.out.println(i);
         }
 
         System.out.println("Using continue:");
+        Label2:
         for (int i = 0; i < 5; i++) {
             if (i == 2) {
-                continue;
+                continue Label2;
             }
             System.out.println(i);
         }
@@ -69,10 +71,14 @@ public class Main {
         System.out.println();
 
         //7.Odwracanie tablicy
-        int[] tab = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println(Arrays.toString(tab));
+
+        Integer[] tab = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println("Array before : " + Arrays.toString(tab));
+        System.out.println("Using reverse method");
         reverseTab(tab);
+        System.out.println("Array after : " + Arrays.toString(tab));
         System.out.println();
+
 
         //8. wykonanie kodu z instrukcji laboratoryjnej
         // args to parametry programu przekazane z wiersza poleceń
@@ -90,7 +96,7 @@ public class Main {
         String stringOne = scanner.nextLine();
         System.out.println("Enter string Two :");
         String stringTwo = scanner.nextLine();
-        if (equalCheck(stringOne,stringTwo) && lenghtCheck(stringOne)) // | lenghtCheck(stringTwo))
+        if (equalCheck(stringOne,stringTwo) & lenghtCheck(stringOne)  | lenghtCheck(stringTwo))
         System.out.println("Condition are met");
         else System.out.println("Condition are not met");
         System.out.println();
@@ -105,11 +111,8 @@ public class Main {
     }
 
     // metoda do odwracania tablicy
-    private static void reverseTab(int[] tab) {
-        //Collections.reverse(Arrays.asList(tab));
-        //System.out.println(Arrays.asList(tab));
-        Collections.reverse(Collections.singletonList(Arrays.toString(tab)));
-        System.out.println(Arrays.toString(tab));
+    static void reverseTab(Integer[] tab) {
+        Collections.reverse(Arrays.asList(tab));
     }
 
     //  metody boolean dla operatorów logicznych
@@ -121,7 +124,7 @@ public class Main {
         int sum = arg1 + arg2;
         int difference = arg1 - arg3;
         int product = arg1 * arg2;
-        float quotient = (float) arg1 / arg3;
+        float quotient = (float) arg2 / arg1;
         double square = (double) Math.sqrt(arg1);
         double square2 = (double) Math.sqrt(arg2);
         double square3 = (double) Math.sqrt(arg3);
