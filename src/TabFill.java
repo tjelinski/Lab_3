@@ -4,17 +4,17 @@ public class TabFill {
     public static void main(String[] args) {
         TabFill arrayFiller = new TabFill(); // Utworzenie obiektu klasy ArrayFiller
 
-        int[] oneDarray = arrayFiller.fillOneDarray(); // Utworzenie jednowymiarowej tablicy i jej wypisanie
+        int[] oneDarray = arrayFiller.fillOneDarray(); // Utworzenie jednowymiarowej tablicy i jej wypełnienie oraz wypisanie
         System.out.println("One dimensional array: ");
-        arrayFiller.printArray(oneDarray);
+        arrayFiller.printArray(oneDarray); //dreukowanie w konsoli
 
-        int[][] twoDarray = arrayFiller.fillTwoDarray(); // Utworzenie dwuwymiarowej tablicy i jej wypisanie
-        System.out.println("\nTwo dimensional array: ");
-        arrayFiller.printArray(twoDarray);
+        int[][] twoDarray = arrayFiller.fillTwoDarray(); // Utworzenie dwuwymiarowej tablicy i jej wypełnienie i wypisanie
+        System.out.println("\nTwo dimensional array: "); // n/ odstęp
+        arrayFiller.printArray(twoDarray); //drukowanie w konsoli
     }
     private int[] fillOneDarray() { // Metoda do wypełniania jednowymiarowej tablicy liczbami losowymi z przedziału od 0 do 20
         int[] array = new int[20];
-        Random random = new Random();
+        Random random = new Random(); // utworzenie obiektu
 
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(21); // losowanie liczby 0 - 20
@@ -36,7 +36,7 @@ public class TabFill {
         return array;
     }
 
-    private void printArray(int[] array) { // Metoda do wypełniania jedno- lub dwuwymiarowej tablicy
+    private void printArray(int[] array) { // Metody do wypełniania jedno- lub dwuwymiarowej tablicy
         for (int value : array) {
             System.out.print(value + " ");
         }
